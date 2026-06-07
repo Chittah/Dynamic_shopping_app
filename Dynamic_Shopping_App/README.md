@@ -1,16 +1,114 @@
-# React + Vite
+# Shopping App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is a React-based Shopping App built using the `useState` hook. The application demonstrates state management, event handling, and conditional rendering in React by implementing three key features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Dark Mode Toggle
+* Category-Based Item Filtering
+* Add to Cart Functionality
 
-## React Compiler
+The project was developed as part of a React Hooks State Management lab.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Dark Mode Toggle
+
+* Users can switch between Light Mode and Dark Mode.
+* The button text updates dynamically between **Dark** and **Light**.
+* The application theme changes based on the selected mode.
+
+### 2. Category Filter
+
+* Users can filter shopping items using a dropdown menu.
+* Available categories include:
+
+  * Dairy
+  * Fruit
+  * Bakery
+  * All
+* Only items belonging to the selected category are displayed.
+
+### 3. Add to Cart
+
+* Each shopping item includes an **Add to Cart** button.
+* Clicking the button adds the item to the cart.
+* Items added to the cart are displayed with the message:
+
+  * "Milk is in your cart."
+  * "Apple is in your cart."
+* Duplicate items are prevented from being added multiple times.
+
+
+
+## Project Structure
+
+
+shopping-app/
+│
+├── public/
+│
+├── src/
+│   ├── data.js
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+│   └── assets/
+│
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
+```
+
+### File Descriptions
+
+#### `src/App.jsx`
+
+Main application component containing:
+
+* Dark mode state management
+* Cart functionality
+* Category filtering
+* UI rendering
+
+#### `src/data.js`
+
+Contains the shopping item data used by the application.
+
+Example:
+
+```javascript
+const items = [
+  { id: 1, name: "Milk", category: "Dairy" },
+  { id: 2, name: "Cheese", category: "Dairy" },
+  { id: 3, name: "Apple", category: "Fruit" },
+  { id: 4, name: "Banana", category: "Fruit" },
+  { id: 5, name: "Bread", category: "Bakery" }
+];
+
+export default items;
+```
+
+#### `src/App.css`
+
+Contains styling for:
+
+* Light and Dark themes
+* Buttons
+* Layout and spacing
+
+#### `src/main.jsx`
+
+Application entry point responsible for rendering the React application.
+
+## Usage
+
+1. Launch the application.
+2. Click the **Dark** button to enable Dark Mode.
+3. Use the dropdown menu to filter products by category.
+4. Click **Add to Cart** to add items to your shopping cart.
+5. View cart contents displayed below the shopping list.
+
