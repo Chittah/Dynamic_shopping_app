@@ -29,3 +29,7 @@
   margin: 10px 0;
   cursor: pointer;
 }
+.dark {
+  background-color: black;
+  color: white;
+}

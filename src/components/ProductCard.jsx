@@ -4,7 +4,7 @@ function ProductCard({ product, addToCart }) {
       <img
         src={product.image}
         alt={product.name}
-        style={{ width: "150px", height: "150px", objectFit: "cover" }}
+        style={{ width: "150px", height: "150px" }}
       />
 
       <h3>{product.name}</h3>
